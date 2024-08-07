@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PokeDex</string>
+    <string name="pokemon_image_description">Pokemon main sprite</string>
+</resources>
