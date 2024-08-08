@@ -1,13 +1,13 @@
 package com.decilos.pokedex.domain.model
 
 data class PokemonDetailModel(
-    val id: Int?,
-    val height: Int?,
-    val weight: Int?,
-    val name: String?,
-    val order: String?,
-    val sprites: SpriteModel,
-    val stats: List<StatsModel>,
-    val type: List<TypeModel>,
-    val abilities: List<AbilitiesModel>
+    val id: Int = 0,
+    val height: Int = 0,
+    val weight: Int = 0,
+    val name: String = "",
+    val order: String = "",
+    val sprites: SpriteModel = SpriteModel(),
+    val stats: List<StatsModel> = emptyList(),
+    val types: List<TypeModel> = emptyList(),
+    val abilities: List<AbilitiesModel> = emptyList()
 )

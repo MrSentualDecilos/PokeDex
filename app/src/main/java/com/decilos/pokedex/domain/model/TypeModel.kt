@@ -1,6 +1,8 @@
 package com.decilos.pokedex.domain.model
 
+import com.google.gson.annotations.SerializedName
+
 data class TypeModel(
     val slot: Int,
-    val TypeDetail: TypeDetailModel
+    @SerializedName("type")val TypeDetail: TypeDetailModel
 )

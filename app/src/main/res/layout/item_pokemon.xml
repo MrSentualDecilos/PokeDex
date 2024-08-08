@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pokemon_background"
     android:layout_width="@dimen/dimen_100_dp"
     android:layout_height="@dimen/dimen_100_dp"
     android:layout_margin="@dimen/padding_medium_3"

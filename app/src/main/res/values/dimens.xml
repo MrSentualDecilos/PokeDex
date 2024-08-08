@@ -12,4 +12,7 @@
     <dimen name="padding_medium_1">10dp</dimen>
     <dimen name="padding_medium_2">12dp</dimen>
     <dimen name="padding_medium_3">14dp</dimen>
+    <dimen name="image_size_small">40dp</dimen>
+    <dimen name="image_size_medium">60dp</dimen>
+    <dimen name="image_size_large">80dp</dimen>
 </resources>

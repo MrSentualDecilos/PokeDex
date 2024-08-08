@@ -1,6 +1,8 @@
 package com.decilos.pokedex.domain.model
 
+import com.google.gson.annotations.SerializedName
+
 data class StatsModel(
-    val baseStat: Int?,
-    val statDetailModel: StatDetailModel
+    @SerializedName("base_stat") val baseStat: Int?,
+    @SerializedName("stat") val stat: StatDetailModel
 )
