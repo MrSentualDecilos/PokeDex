@@ -3,7 +3,6 @@ package com.decilos.pokedex.presenter.list.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.decilos.pokedex.data.datasource.remote.response.PokemonResponse
 import com.decilos.pokedex.domain.model.PokemonModel
 import com.decilos.pokedex.domain.usecase.GetPokemonUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,7 +18,7 @@ const val OFFSET = 0
 class PokemonListViewModel @Inject constructor(
     private val getPokemonUseCase: GetPokemonUseCase
 ) : ViewModel() {
-    val pokemonList = MutableLiveData<List<PokemonResponse>>()
+    val pokemonList = MutableLiveData<List<PokemonModel>>()
     val isLoading = MutableLiveData<Boolean>()
 
     fun getPokemonList() {
@@ -35,6 +34,7 @@ class PokemonListViewModel @Inject constructor(
                     }
                 }.awaitAll()
                 isLoading.postValue(false)
+                getPokemonUseCase.insertAllPokemonToDB(result)
                 pokemonList.postValue(result)
             }
         }

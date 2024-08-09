@@ -8,8 +8,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import com.decilos.pokedex.data.datasource.remote.response.PokemonResponse
 import com.decilos.pokedex.databinding.FragmentPokemonListBinding
+import com.decilos.pokedex.domain.model.PokemonModel
 import com.decilos.pokedex.presenter.list.adapters.PokemonListAdapter
 import com.decilos.pokedex.presenter.list.viewmodel.PokemonListViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -54,7 +54,7 @@ class PokemonListFragment : Fragment() {
         }
     }
 
-    private fun setListToView(list: List<PokemonResponse>) {
+    private fun setListToView(list: List<PokemonModel>) {
         adapter = PokemonListAdapter(list)
         binding.apply {
             mainPokemonRecyclerview.setHasFixedSize(true)

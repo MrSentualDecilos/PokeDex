@@ -2,4 +2,11 @@
     <string name="app_name">PokeDex</string>
     <string name="pokemon_image_description">Pokemon main sprite</string>
     <string name="pokemon_list_fragment_label">Pokemon List</string>
+    <string name="type_poison">poison</string>
+    <string name="type_grass">grass</string>
+    <string name="type_electric">electric</string>
+    <string name="type_normal">normal</string>
+    <string name="type_fire">fire</string>
+    <string name="type_water">water</string>
+    <string name="type_psychic">psychic</string>
 </resources>

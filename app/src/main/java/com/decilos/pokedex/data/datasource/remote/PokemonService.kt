@@ -1,8 +1,8 @@
 package com.decilos.pokedex.data.datasource.remote
 
+import com.decilos.pokedex.data.datasource.remote.response.PokemonDetailResponse
+import com.decilos.pokedex.data.datasource.remote.response.ResultResponse
 import com.decilos.pokedex.data.network.PokemonApi
-import com.decilos.pokedex.domain.model.PokemonDetailModel
-import com.decilos.pokedex.domain.model.ResultModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response
@@ -13,17 +13,17 @@ class PokemonService @Inject constructor(private val api: PokemonApi) {
     suspend fun getPokemons(
         limit: Int,
         offSet: Int
-    ) : ResultModel {
+    ) : ResultResponse {
         return withContext(Dispatchers.IO) {
-            val response: Response<ResultModel> = api.getAllPokemon(limit, offSet)
-            response.body() ?: ResultModel()
+            val response: Response<ResultResponse> = api.getAllPokemon(limit, offSet)
+            response.body() ?: ResultResponse()
         }
     }
 
-    suspend fun getPokemonDetail(name: String) : PokemonDetailModel {
+    suspend fun getPokemonDetail(name: String) : PokemonDetailResponse {
         return withContext(Dispatchers.IO) {
-            val response: Response<PokemonDetailModel> = api.getPokemonDetail(name)
-            response.body() ?: PokemonDetailModel()
+            val response: Response<PokemonDetailResponse> = api.getPokemonDetail(name)
+            response.body() ?: PokemonDetailResponse()
         }
     }
 }
