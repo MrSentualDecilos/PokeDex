@@ -7,6 +7,14 @@
 This is a personal project I made with Kotlin for displaying my portfolio to recruiters, but feel free to
 check it out and download it to take on ideas!
 
+For this project I used:
+- Kotlin
+- MVVM
+- Clean architecture
+- Unit testing
+- Dagger Hilt for DI
+- Room DB
+
 # Thanks! (:
 
 - This project is powered by https://pokeapi.co/
