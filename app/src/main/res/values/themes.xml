@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.PokeDex" parent="Base.Theme.PokeDex" />
+    
+    <style name="Theme.Starting.App" parent="Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/Base.Theme.PokeDex</item>
+    </style>
 </resources>

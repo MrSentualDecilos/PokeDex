@@ -9,7 +9,16 @@
         android:id="@+id/pokemon_list_fragment"
         android:name="com.decilos.pokedex.presenter.list.PokemonListFragment"
         android:label="@string/pokemon_list_fragment_label"
-        tools:layout="@layout/fragment_pokemon_list" />
+        tools:layout="@layout/fragment_pokemon_list">
+        <action
+            android:id="@+id/action_from_pokemonlist_to_pokemondetail"
+            app:destination="@id/pokemon_detail_fragment"/>
+    </fragment>
 
+    <fragment
+        android:id="@+id/pokemon_detail_fragment"
+        android:name="com.decilos.pokedex.presenter.details.PokemonDetailFragment"
+        android:label="@string/pokemon_detail_fragment_label"
+        tools:layout="@layout/fragment_pokemon_detail"/>
 
 </navigation>

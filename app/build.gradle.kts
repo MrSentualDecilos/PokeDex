@@ -72,6 +72,8 @@ dependencies {
     //Room
     implementation("androidx.room:room-ktx:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
+    //Splash
+    implementation("androidx.core:core-splashscreen:1.2.0-alpha01")
     //Test
     testImplementation("junit:junit:4.13.2")
     testImplementation("io.mockk:mockk:1.12.2")
