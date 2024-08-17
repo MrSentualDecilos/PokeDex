@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_pokemon_list">
         <action
             android:id="@+id/action_from_pokemonlist_to_pokemondetail"
-            app:destination="@id/pokemon_detail_fragment">
+            app:destination="@id/pokemon_detail_fragment"
+            app:enterAnim="@anim/slide_right_to_left"
+            app:exitAnim="@anim/slide_left_to_right"
+            app:popEnterAnim="@anim/slide_right_to_left"
+            app:popExitAnim="@anim/slide_left_to_right">
             <argument
                 android:name="pokemonDetailModel"
                 app:argType="com.decilos.pokedex.domain.model.PokemonDetailModel"

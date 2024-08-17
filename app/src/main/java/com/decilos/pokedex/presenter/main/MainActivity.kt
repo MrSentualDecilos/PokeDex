@@ -1,6 +1,7 @@
 package com.decilos.pokedex.presenter.main
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -49,9 +50,10 @@ class MainActivity : AppCompatActivity() {
             when(destination.id) {
                 R.id.pokemon_list_fragment -> {
                     setTitleToolbar(getString(R.string.app_name))
+                    binding.mainToolbar.toolbar.visibility = View.VISIBLE
                 }
                 R.id.pokemon_detail_fragment -> {
-                    setTitleToolbar("")
+                    binding.mainToolbar.toolbar.visibility = View.GONE
                 }
             }
         }

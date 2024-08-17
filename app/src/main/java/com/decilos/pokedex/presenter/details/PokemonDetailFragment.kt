@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.widget.ViewPager2
 import com.decilos.pokedex.R
@@ -50,6 +51,9 @@ class PokemonDetailFragment : Fragment() {
             pokemonDetailName.text = pokemonDetail.name.capitalizeWord()
             pokemonDetailOrder.text = getString(R.string.pokemon_order_number, pokemonDetail.order)
             pokemonDetail.types.first().typeDetail.name?.let { setTypeBackground(it) }
+            pokemonDetailBackButton.setOnClickListener {
+                findNavController().popBackStack()
+            }
             setUpAdapter()
             setViewPagerAdapter()
         }
