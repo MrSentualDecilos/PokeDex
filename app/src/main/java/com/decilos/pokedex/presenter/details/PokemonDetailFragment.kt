@@ -24,6 +24,8 @@ class PokemonDetailFragment : Fragment() {
     private lateinit var pokemonDetail: PokemonDetailModel
     private val pokemonDetailNavArgs: PokemonDetailFragmentArgs by navArgs()
 
+    private var shinyUrl: String = ""
+
     private val tabsArray by lazy {
         resources.getStringArray(R.array.pokemon_detail_tabs)
     }
@@ -54,6 +56,10 @@ class PokemonDetailFragment : Fragment() {
             pokemonDetailBackButton.setOnClickListener {
                 findNavController().popBackStack()
             }
+            pokemonDetailShiny.setOnClickListener {
+                changeSpriteForShiny()
+                binding.pokemonDetailImage.loadImage(shinyUrl)
+            }
             setUpAdapter()
             setViewPagerAdapter()
         }
@@ -64,6 +70,14 @@ class PokemonDetailFragment : Fragment() {
         binding.apply {
             pokemonDetailTypesRecyclerview.setHasFixedSize(true)
             pokemonDetailTypesRecyclerview.adapter = adapter
+        }
+    }
+
+    private fun changeSpriteForShiny() {
+        shinyUrl = if (shinyUrl != pokemonDetail.sprites.frontShiningSprite) {
+            pokemonDetail.sprites.frontShiningSprite
+        } else {
+            pokemonDetail.sprites.frontSprite
         }
     }
 

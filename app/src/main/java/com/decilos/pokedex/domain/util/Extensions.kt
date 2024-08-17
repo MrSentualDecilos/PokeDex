@@ -2,6 +2,8 @@ package com.decilos.pokedex.domain.util
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide
+import com.decilos.pokedex.R
+import com.decilos.pokedex.domain.util.Extensions.loadImage
 import java.util.Locale
 import kotlin.math.roundToInt
 
@@ -18,7 +20,7 @@ object Extensions {
 
     fun ImageView.loadImage(url: String) {
         if (url.isNotEmpty()) {
-            Glide.with(this.context).load(url).into(this)
+            Glide.with(this.context).load(url).placeholder(R.drawable.loading).into(this)
         }
     }
 
