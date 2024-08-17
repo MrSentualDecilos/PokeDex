@@ -11,7 +11,7 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-const val LIMIT = 100
+const val LIMIT = 300
 const val OFFSET = 0
 
 @HiltViewModel

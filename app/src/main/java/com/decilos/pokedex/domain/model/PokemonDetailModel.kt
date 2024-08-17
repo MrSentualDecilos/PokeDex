@@ -1,5 +1,9 @@
 package com.decilos.pokedex.domain.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class PokemonDetailModel(
     val id: Int = 0,
     val height: Int = 0,
@@ -10,4 +14,4 @@ data class PokemonDetailModel(
     val stats: List<StatsModel> = emptyList(),
     val types: List<TypeModel> = emptyList(),
     val abilities: List<AbilitiesModel> = emptyList()
-)
+): Parcelable

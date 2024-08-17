@@ -12,13 +12,24 @@
         tools:layout="@layout/fragment_pokemon_list">
         <action
             android:id="@+id/action_from_pokemonlist_to_pokemondetail"
-            app:destination="@id/pokemon_detail_fragment"/>
+            app:destination="@id/pokemon_detail_fragment">
+            <argument
+                android:name="pokemonDetailModel"
+                app:argType="com.decilos.pokedex.domain.model.PokemonDetailModel"
+                app:nullable="true" />
+        </action>
     </fragment>
 
     <fragment
         android:id="@+id/pokemon_detail_fragment"
         android:name="com.decilos.pokedex.presenter.details.PokemonDetailFragment"
         android:label="@string/pokemon_detail_fragment_label"
-        tools:layout="@layout/fragment_pokemon_detail"/>
+        tools:layout="@layout/fragment_pokemon_detail">
+        <argument
+            android:name="pokemonDetailModel"
+            android:defaultValue="@null"
+            app:argType="com.decilos.pokedex.domain.model.PokemonDetailModel"
+            app:nullable="true" />
+    </fragment>
 
 </navigation>

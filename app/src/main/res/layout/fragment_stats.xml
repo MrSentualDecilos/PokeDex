@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_large_3"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/health_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/health"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/health_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PokemonDetailsText"
+            android:text="@string/health"
+            app:layout_constraintStart_toEndOf="@id/health"
+            app:layout_constraintTop_toTopOf="@+id/health"
+            app:layout_constraintBottom_toBottomOf="@+id/health"/>
+
+        <TextView
+            android:id="@+id/health_textview"
+            android:layout_width="@dimen/dimen_150_dp"
+            android:layout_height="wrap_content"
+            style="@style/PokemonInfoText"
+            android:background="@drawable/background_info_white"
+            android:textAlignment="center"
+            android:padding="@dimen/padding_medium_1"
+            android:layout_marginTop="@dimen/padding_medium_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/health"
+            app:layout_constraintTop_toBottomOf="@id/health"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/attack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/damage_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PokemonDetailsText"
+            android:text="@string/attack"
+            app:layout_constraintStart_toEndOf="@id/attack"
+            app:layout_constraintTop_toTopOf="@+id/attack"
+            app:layout_constraintBottom_toBottomOf="@+id/attack"/>
+
+        <TextView
+            android:id="@+id/attack_textview"
+            android:layout_width="@dimen/dimen_150_dp"
+            android:layout_height="wrap_content"
+            style="@style/PokemonInfoText"
+            android:background="@drawable/background_info_white"
+            android:textAlignment="center"
+            android:padding="@dimen/padding_medium_1"
+            android:layout_marginTop="@dimen/padding_medium_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/attack"
+            app:layout_constraintTop_toBottomOf="@id/attack"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_medium_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/health_container">
+
+        <ImageView
+            android:id="@+id/defense"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/defense_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PokemonDetailsText"
+            android:text="@string/defense"
+            app:layout_constraintStart_toEndOf="@id/defense"
+            app:layout_constraintTop_toTopOf="@+id/defense"
+            app:layout_constraintBottom_toBottomOf="@+id/defense"/>
+
+        <TextView
+            android:id="@+id/defense_textview"
+            android:layout_width="@dimen/dimen_150_dp"
+            android:layout_height="wrap_content"
+            style="@style/PokemonInfoText"
+            android:background="@drawable/background_info_white"
+            android:textAlignment="center"
+            android:padding="@dimen/padding_medium_1"
+            android:layout_marginTop="@dimen/padding_medium_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/defense"
+            app:layout_constraintTop_toBottomOf="@id/defense"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,9 @@
     <color name="electric_type_color">#F0E315</color>
     <color name="poison_type_color">#B015A7</color>
     <color name="plant_type_color">#19CB10</color>
-    <color name="physics_type_color">#7B8D7A</color>
+    <color name="normal_type_color">#7B8D7A</color>
+    <color name="rock_type_color">#c8b58a</color>
+    <color name="fighting_type_color">#ce3f6b</color>
+    <color name="ghost_type_color">#5269ad</color>
     <color name="dark_purple">#7e03ab</color>
 </resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_large_3"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weight_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/weight"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/weight_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PokemonDetailsText"
+            android:text="@string/weight"
+            app:layout_constraintStart_toEndOf="@id/weight"
+            app:layout_constraintTop_toTopOf="@+id/weight"
+            app:layout_constraintBottom_toBottomOf="@+id/weight"/>
+
+        <TextView
+            android:id="@+id/weight_textview"
+            android:layout_width="@dimen/dimen_150_dp"
+            android:layout_height="wrap_content"
+            style="@style/PokemonInfoText"
+            android:background="@drawable/background_info_white"
+            android:textAlignment="center"
+            android:padding="@dimen/padding_medium_1"
+            android:layout_marginTop="@dimen/padding_medium_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/weight"
+            app:layout_constraintTop_toBottomOf="@id/weight"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/height"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/height_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PokemonDetailsText"
+            android:text="@string/height"
+            app:layout_constraintStart_toEndOf="@id/height"
+            app:layout_constraintTop_toTopOf="@+id/height"
+            app:layout_constraintBottom_toBottomOf="@+id/height"/>
+
+        <TextView
+            android:id="@+id/height_textview"
+            android:layout_width="@dimen/dimen_150_dp"
+            android:layout_height="wrap_content"
+            style="@style/PokemonInfoText"
+            android:background="@drawable/background_info_white"
+            android:textAlignment="center"
+            android:padding="@dimen/padding_medium_1"
+            android:layout_marginTop="@dimen/padding_medium_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/height"
+            app:layout_constraintTop_toBottomOf="@id/height"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_medium_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weight_container">
+
+        <ImageView
+            android:id="@+id/experience"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/pokeball_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PokemonDetailsText"
+            android:text="@string/ability"
+            app:layout_constraintStart_toEndOf="@id/experience"
+            app:layout_constraintTop_toTopOf="@+id/experience"
+            app:layout_constraintBottom_toBottomOf="@+id/experience"/>
+
+        <TextView
+            android:id="@+id/ability_textview"
+            android:layout_width="@dimen/dimen_160_dp"
+            android:layout_height="wrap_content"
+            style="@style/PokemonInfoText"
+            android:background="@drawable/background_info_white"
+            android:textAlignment="center"
+            android:padding="@dimen/padding_medium_1"
+            android:layout_marginTop="@dimen/padding_medium_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/experience"
+            app:layout_constraintTop_toBottomOf="@id/experience"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
