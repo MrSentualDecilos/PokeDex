@@ -16,6 +16,7 @@ For this project I used:
 - Unit testing
 - Dagger Hilt for DI
 - Room DB
+- CI/CD
 
 # Thanks! (:
 
